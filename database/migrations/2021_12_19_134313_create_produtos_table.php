@@ -17,6 +17,7 @@ class CreateProdutosTable extends Migration
             $table->id();
             $table->string('tipo', 32);
             $table->string('nome');
+            $table->string('categoria', 32);
             $table->string('img_logo')->nullable();
             $table->string('img_produto')->nullable();
             $table->string('garantia')->nullable();

@@ -13,6 +13,8 @@ class Kits extends Model
     [
         'sku',
         'modelo',
+        'inversor',
+        'painel',
         'margem',
         'potencia',
         'preco_cliente',

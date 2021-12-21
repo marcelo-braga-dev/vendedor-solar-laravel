@@ -3,10 +3,10 @@
 @section('content')
     <x-layout.body.main title="Lista de kits" url-button="">
         @foreach ($kits as $kit)
-            <div class="border-bottom py-3">
+            <div class="border-bottom py-3 text-sm">
                 <div class="row">
                     <div class="col">
-                        <h4>{{ $kit->modelo }}</h4> 
+                        <h4>{{ $kit->modelo }}</h4>
                     </div>
                 </div>
                 <div class="row">
@@ -25,10 +25,10 @@
                         Id: #{{ $kit->id }}
                     </div>
                     <div class="col">
-                        Estrutura: {{ $kit->estrutura }}
+                        Estrutura: {{ get_estrutura($kit->estrutura) }}
                     </div>
                     <div class="col">
-                        Tensão: {{ $kit->tensao }}V
+                        Tensão: {{ $kit->tensao }} V
                     </div>
                 </div>
                 <div class="row">
@@ -42,8 +42,11 @@
                         Margem de Venda: {{ $kit->margem }}%
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col text-right small">
+                <div class="row justify-content-between">
+                    <div class="col small">
+                        Atualizado em: {{ date('d/m/y H:i', strtotime($kit->updated_at)) }}
+                    </div>
+                    <div class="col text-right">
                         <a href="/">
                             Editar
                         </a>

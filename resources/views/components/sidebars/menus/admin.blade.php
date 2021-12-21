@@ -15,13 +15,13 @@
         <div class="collapse show" id="navbar-examples">
             <ul class="nav nav-sm flex-column">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin.kits.todos-kits') }}">
-                        Kits Fotovoltaicos
+                    <a class="nav-link pl-5" href="{{ route('admin.kits.create') }}">
+                        Cadastrar Kit FV
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">
-                        {{ __('User Management') }}
+                    <a class="nav-link pl-5" href="{{ route('admin.kits.index') }}">
+                        Kits FV Cadastrados
                     </a>
                 </li>
             </ul>

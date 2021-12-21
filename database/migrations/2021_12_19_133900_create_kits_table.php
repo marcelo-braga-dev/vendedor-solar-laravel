@@ -17,10 +17,12 @@ class CreateKitsTable extends Migration
             $table->id();
             $table->string('sku', 16)->nullable();
             $table->string('modelo');
+            $table->bigInteger('inversor');
+            $table->bigInteger('painel');
             $table->string('margem', 8)->nullable();
-            $table->string('potencia', 8);
-            $table->string('preco_cliente', 32)->nullable();
-            $table->string('preco_fornecedor', 32);
+            $table->float('potencia');
+            $table->float('preco_cliente', 32)->nullable();
+            $table->float('preco_fornecedor', 32);
             $table->boolean('status')->default(true);
             $table->boolean('status_fornecedor')->default(true);
             $table->integer('fornecedor');
